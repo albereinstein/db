@@ -17,6 +17,8 @@ RUN bash /opt/setupdb.sh
 RUN chown -R mysql: /var/lib/mysql \
     && chmod -R 0777 /var/lib/mysql
 
+ENV albert=einstein
+
 EXPOSE 3306
 
 RUN /usr/bin/cat /etc/my.cnf > /tmp/my.cnf \
