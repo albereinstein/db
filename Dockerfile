@@ -24,5 +24,4 @@ EXPOSE 3306
 RUN /usr/bin/cat /etc/my.cnf > /tmp/my.cnf \
     && chmod 0777 /tmp/my.cnf
 
-ENTRYPOINT ["/usr/bin/mysqld_safe"]
-CMD ["--datadir=/var/lib/mysql", "--user=mysql"]
+ENTRYPOINT ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql"]
